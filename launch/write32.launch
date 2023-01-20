@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="write" pkg="rc_ros_32" type="write" output="screen"/>
+</launch>
