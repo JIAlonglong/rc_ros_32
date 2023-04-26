@@ -71,7 +71,7 @@ int main(int argc, char **argv)
 {
     ros::init(argc, argv, "ros_32_bridge");
     ros::NodeHandle nh;
-    ros::Rate loop_rate(10);
+    ros::Rate loop_rate(50);
     Action ac;
     imu mu;
     unknown n;

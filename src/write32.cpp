@@ -19,10 +19,10 @@ int main(int argc, char **argv)
     ros::NodeHandle nh;
     geometry_msgs::Twist goal;
     nav_msgs::Odometry odom;
-    ros::Rate loop_rate(10);
+    ros::Rate loop_rate(50);
     while (ros::ok()|| ROS_WRITE_TO_STM32)
     {
-        ROS_WRITE_TO_STM32(goal.linear.x,goal.linear.y,goal.angular.z,1.0,1.0,1.0,1.0,1.0,1.0,1.0);//push
+        ROS_WRITE_TO_STM32(goal.linear.x,goal.linear.y,goal.angular.z,odom.pose.pose.position.x,odom.pose.pose.position.y,odom.pose.pose.position.z,1.0,1.0,1.0,1.0);//push
         ros::spinOnce();
         loop_rate.sleep();
     }
