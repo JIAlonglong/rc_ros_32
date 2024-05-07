@@ -11,7 +11,6 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
-  rc_common
   realtime_tools
 )
 
@@ -84,14 +83,6 @@ include_directories(
 # add_library(${PROJECT_NAME}
 #   src/Communication_ROS.cpp
 # )
-
-add_executable(read src/read32.cpp src/Communication_ROS.cpp)
-add_dependencies(read ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(read ${catkin_LIBRARIES} )
-
-add_executable(write src/write32.cpp src/Communication_ROS.cpp)
-add_dependencies(write ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(write ${catkin_LIBRARIES} )
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
