@@ -63,7 +63,6 @@ catkin_package(
   roscpp 
   rospy 
   std_msgs
-  rc_common
   realtime_tools
  DEPENDS system_lib
 )
